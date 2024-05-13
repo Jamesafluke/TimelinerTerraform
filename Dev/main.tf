@@ -4,7 +4,7 @@ terraform {
     resource_group_name  = "rg-tfstate"
     storage_account_name = "satfstate109234"
     container_name       = "tfstate"
-    key                  = "FilestructureTest/prod/rg/terraform.tfstate"
+    key                  = "TimelinerTerraform/Dev/rg/terraform.tfstate"
   }
   required_providers {
     azurerm = {
@@ -22,7 +22,7 @@ provider "azurerm" {
 }
 
 module "rg" {
-  source = "github.com/Jamesafluke/TimelinerTerraform.git//TimelinerTerraform/Modules/rg"
+  source = "github.com/Jamesafluke/TimelinerTerraform.git//Modules/rg"
   location = "westus2"
   rg_name  = "rg_timeliner_prod"
 }
