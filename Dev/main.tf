@@ -21,8 +21,8 @@ provider "azurerm" {
   tenant_id       = var.tenant_id
 }
 
-# module "rg" {
-#   source = "github.com/Jamesafluke/TerraformCram.git//FilestructureTest/modules/modules/rg?ref=v1.01.0"
-#   location = "westus2"
-#   rg_name  = "rg_filestructureTest_prod"
-# }
+module "rg" {
+  source = "github.com/Jamesafluke/TimelinerTerraform.git//TimelinerTerraform/Modules/rg"
+  location = "westus2"
+  rg_name  = "rg_timeliner_prod"
+}
